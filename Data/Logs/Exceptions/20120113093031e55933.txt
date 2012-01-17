@@ -1,0 +1,7 @@
+Uncaught exception #1 in line 79 of /Applications/MAMP/htdocs/flow3/Packages/Framework/TYPO3.FLOW3/Classes/Object/ObjectManager.php: Catchable Fatal Error: Argument 1 passed to TYPO3\FLOW3\Object\ObjectManager::setObjects() must be an array, boolean given, called in /Applications/MAMP/htdocs/flow3/Packages/Framework/TYPO3.FLOW3/Classes/Core/Bootstrap.php on line 431 and defined in /Applications/MAMP/htdocs/flow3/Packages/Framework/TYPO3.FLOW3/Classes/Object/ObjectManager.php line 79
+
+5 TYPO3\FLOW3\Error\ErrorHandler::handleError(4096, (Argument 1 passed to TYPO3\FLOW3\Object\ObjectManager::setObjects() must be an array, boolean given, called in /Applications/MAMP/htdocs/flow3/Packages/Framework/TYPO3.FLOW3/Classes/Core/Bootstrap.php on line 431 and defined)Argument 1 passed to TYPO3\FLOW3\Object\ObjectMana…Classes/Core/Bootstrap.php on line 431 and defined, (/Applications/MAMP/htdocs/flow3/Packages/Framework/TYPO3.FLOW3/Classes/Object/ObjectManager.php)/Applications/MAMP/htdocs/flow3/Packages/Framework/TYPO3.FLOW3/Classes/Object/ObjectManager.php, 79, array)
+4 TYPO3\FLOW3\Object\ObjectManager::setObjects(boolean)
+3 TYPO3\FLOW3\Core\Bootstrap::initializeForRuntime()
+2 TYPO3\FLOW3\Core\Bootstrap::handleWebRequest()
+1 TYPO3\FLOW3\Core\Bootstrap::run()

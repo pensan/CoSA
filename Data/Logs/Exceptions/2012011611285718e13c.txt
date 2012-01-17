@@ -1,0 +1,15 @@
+Uncaught exception #1: Catchable Fatal Error: Object of class CoSA\Domain\Model\Question could not be converted to string in /Applications/MAMP/htdocs/flow3/Packages/Framework/Doctrine/Classes/DBAL/Statement.php line 131
+
+13 TYPO3\FLOW3\Error\ErrorHandler::handleError(4096, (Object of class CoSA\Domain\Model\Question could not be converted to string)Object of class CoSA\Domain\Model\Question could not be converted to string, (/Applications/MAMP/htdocs/flow3/Packages/Framework/Doctrine/Classes/DBAL/Statement.php)/Applications/MAMP/htdocs/flow3/Packages/Framework/Doctrine/Classes/DBAL/Statement.php, 131, array)
+12 PDOStatement::execute(NULL)
+11 Doctrine\DBAL\Statement::execute()
+10 Doctrine\ORM\Persisters\BasicEntityPersister::executeInserts()
+9 Doctrine\ORM\UnitOfWork::executeInserts(TYPO3\FLOW3\Persistence\Doctrine\Mapping\ClassMetadata)
+8 Doctrine\ORM\UnitOfWork::commit()
+7 Doctrine\ORM\EntityManager::flush()
+6 TYPO3\FLOW3\Persistence\Doctrine\PersistenceManager_Original::persistAll((TYPO3\FLOW3\Core\Bootstrap::finishedRuntimeRun)TYPO3\FLOW3\Core\Bootstrap::finishedRuntimeRun)
+5 call_user_func_array(array, array)
+4 TYPO3\FLOW3\SignalSlot\Dispatcher::dispatch((TYPO3\FLOW3\Core\Bootstrap)TYPO3\FLOW3\Core\Bootstrap, (finishedRuntimeRun)finishedRuntimeRun, array)
+3 TYPO3\FLOW3\Core\Bootstrap::emitFinishedRuntimeRun()
+2 TYPO3\FLOW3\Core\Bootstrap::handleWebRequest()
+1 TYPO3\FLOW3\Core\Bootstrap::run()

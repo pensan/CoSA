@@ -1,0 +1,167 @@
+/* 
+fh salzburg 
+spezieller einstellungen fuer internet explorer < version 7
+meg@wachenfeld-golla.de, 2008-03-14
+*/
+
+div.csc-textpic-image a span {
+	background: url(../p/icons/abspielenKlein.gif) no-repeat 0 0;
+	color: #fff; /* ie6 zeigt sonst den letzten buchstaben */
+	bottom: 3px;
+}
+
+div.csc-textpic-image a:link span, div.csc-textpic-image a:visited span {
+	filter:alpha(opacity=30);
+}
+
+div.csc-textpic-image a:hover span, div.csc-textpic-image a:active span, div.csc-textpic-image a:focus span {
+	filter:alpha(opacity=60);
+}
+
+ul#hauptnavigation a {
+	width:10.5em;
+}
+
+div#ContentBlock {
+	margin: 0 0 0 0 !important;
+	padding:0 0 0 0.8em !important;
+	width: 64.9em !important;
+	/* border:1px solid gold; */
+}
+
+body.startseite div#ContentBlock {
+	padding:0 0 0 0 !important;
+	width: 66.5em !important;
+}
+
+
+div#ContentBlock div.csc-header.csc-header-n1 {
+	/* border: 1px solid #ddd;*/
+	margin-top:36px !important;
+}
+
+div#ContentBlock div.csc-textpic-imagewrap {
+	margin-right: -20px;
+}
+
+div#ContentBlock ul#shortCutNavi li {
+	/* border: 1px solid #ddd;*/
+	width: 16.1em;
+}
+
+div#ContentBlock ul#shortCutNavi li#shortLinks ul li {
+	/* width: 180px; 
+	border: 1px solid #ddd;*/
+	width: 16.1em;
+}
+
+div#ContentBlock blockquote {
+	margin-right:105px;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte4Clone {
+	width: 400px;
+	overflow: hidden;
+	margin-right: 0;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte5Clone {
+	width: 16.1em;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte5Clone li {
+	width: 100%;
+}
+
+div#ContentBlock ul#shortCutNavi ul.spalte5Clone li a {
+	width: 100%;
+}
+
+ul#hauptnavigation {
+	border-top: none;
+	border-bottom: 1px solid #ccc;
+}
+
+/* 
+bleibt bei ie der border unten, wird am unteren ende des <li> vieles falsch dargestellt 
+andererseits hat safari schwierigkeiten, wenn man border-top verwendet...
+*/
+ul#hauptnavigation li {
+	border-top: 1px solid #ccc;
+	border-bottom: none;
+}
+
+ul#hauptnavigation ul ul a.mitSubmenu {
+	/* background: none;*/
+}
+
+ul#hauptnavigation ul.spalte2, ul#hauptnavigation ul.spalte3, ul#hauptnavigation ul.spalte4 {
+	top: -36px;
+	margin-bottom: -35px;
+}
+
+ul#hauptnavigation ul.spalte5 {
+	top: -44px;
+	margin-bottom: -43px;
+}
+
+body.startseite div#ContentBlock h2 {
+	margin-left: 0.9em;
+}
+
+body.startseite div#ContentBlock, body.startseite.javaScriptAktiv div#ContentBlock {
+	margin-left: 10em !important;
+}
+
+div#ContentBlock ul#marginalLinks {
+	margin-top: 48px !important;
+}
+/*TYPO3-spezifisch, eingefügt von Stefan am 12.Dez 2007*/
+div#trailers .csc-textpic-imagewrap {
+	width:66.5em
+}
+
+div#trailers a span {
+	background: url(../p/icons/abspielenKlein.gif) no-repeat 0 0;
+	color: #fff; /* ie6 zeigt sonst den letzten buchstaben */
+	bottom: 8px;
+	right: 18px;
+}
+
+div#trailers a:link span, div#trailers a:visited span {
+	filter:alpha(opacity=30);
+}
+
+div#trailers a:hover span, div#trailers a:active span, div#trailers a:focus span {
+	filter:alpha(opacity=60);
+}
+
+
+body {
+	text-align:center;
+}
+
+body div#wrap, body div div {
+	text-align:left;
+}
+
+ul#hauptnavigation a.zweiZeilig {
+	padding-top: 9px !important;
+	background-position: 100% 13px !important;
+}
+
+body#sitemap ul#hauptnavigation ul.spalte4 {
+	top: -36px;
+	margin-bottom: 0px;
+}
+
+body#sitemap ul#hauptnavigation ul.spalte5 {
+	margin-top: 0px;
+	top: -36px;
+	margin-bottom: -29px;
+}
+
+li.rss {
+	position: inherit;
+	top: 0;
+}
