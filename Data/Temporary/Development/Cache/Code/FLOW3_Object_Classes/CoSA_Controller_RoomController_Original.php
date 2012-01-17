@@ -10,6 +10,7 @@ use TYPO3\FLOW3\Annotations as FLOW3;
 
 use TYPO3\FLOW3\MVC\Controller\ActionController;
 use \CoSA\Domain\Model\Room;
+use \CoSA\Domain\Model\Answer;
 
 /**
  * Room controller for the CoSA package 
@@ -54,19 +55,34 @@ class RoomController_Original extends ActionController {
 	 */
 	public function indexAction() {
 		$this->checkName();
-		$this->adventureSession->printSession();
-		$this->view->assign('playerName', $this->adventureSession->getName());
-		$this->view->assign('rooms', $this->roomRepository->findAll());
+		//$this->adventureSession->printSession();
+		//$this->view->assign('playerName', $this->adventureSession->getName());
+		//$this->view->assign('rooms', $this->roomRepository->findAll());
+		$room = $this->roomRepository->findOneByName("Eingang");
+		//\TYPO3\FLOW3\var_dump($room);
+		$this->redirect('show', 'Room', NULL, array('room' => $room));
 	}
 	
 	/**
 	 * Get a room
 	 *
+	 * @param \CoSA\Domain\Model\Room $room
+	 * @param \CoSA\Domain\Model\Answer $answer
 	 * @return void
 	 */
-	public function getAction($answer) {
+	public function getAction(Room $room, Answer $answer) {
 		$this->checkName();
-		$this->adventureSession->printSession();
+		
+		// update points
+		
+		// get next room
+		switch($room->getName()){
+			case "Eingang":
+				$roomName = "MMT";
+				break;
+		}
+		$room = $this->roomRepository->findOneByName($roomName);
+		$this->redirect('show', 'Room', NULL, array('room' => $room));
 	}
 
 	/**
@@ -76,7 +92,14 @@ class RoomController_Original extends ActionController {
 	 * @return void
 	 */
 	public function showAction(Room $room) {
+		$bgImage = "eingang_final.jpg";
+		$cora = "cora.png";
+		$bubble = "sprechblase_final.png";
+		
 		$this->view->assign('room', $room);
+		$this->view->assign('backgroundImage', $bgImage);
+		$this->view->assign('cora', $cora);
+		$this->view->assign('bubble', $bubble);
 	}
 
 	/**
@@ -138,4 +161,4 @@ class RoomController_Original extends ActionController {
 }
 
 
-#0             %CLASS%CoSA_Controller_RoomController3131      
+#0             %CLASS%CoSA_Controller_RoomController3869      

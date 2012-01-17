@@ -1,0 +1,39 @@
+Uncaught exception #1264589155 in line 440 of /Users/Pensan/Webpages/Apache/CoSA/Data/Temporary/Development/Cache/Code/FLOW3_Object_Classes/TYPO3_Fluid_Core_Parser_TemplateParser_Original.php: Object "TYPO3\Fluid\ViewHelpers\ImageViewHelper" is not registered.
+
+23 TYPO3\FLOW3\Object\ObjectManager::get((TYPO3\Fluid\ViewHelpers\ImageViewHelper)TYPO3\Fluid\ViewHelpers\ImageViewHelper)
+22 TYPO3\Fluid\Core\Parser\TemplateParser_Original::initializeViewHelperAndAddItToStack(TYPO3\Fluid\Core\Parser\ParsingState, (f)f, (image)image, array)
+21 TYPO3\Fluid\Core\Parser\TemplateParser_Original::openingViewHelperTagHandler(TYPO3\Fluid\Core\Parser\ParsingState, (f)f, (image)image, ( src="{f:uri.resource(path: 'pics/rooms/{backgroundImage}')}" width="100" ) src=&quot;{f:uri.resource(path: 'pics/rooms/{backgroundImage}')}&quot; width=&quot;100&quot; , boolean)
+20 TYPO3\Fluid\Core\Parser\TemplateParser_Original::buildObjectTree(array)
+19 TYPO3\Fluid\Core\Parser\TemplateParser_Original::parse((<f:layout name="Default" />
+
+<f:section name="Title">Show room "{room.name}"</f:section>
+
+
+<f:section name="Content">
+	<div style="background-image: url({f:uri.resource(path: 'pics/rooms/{backgroundImage}')}); height: 500px; width: 850px;">
+		<div>
+			<f:image src="{f:uri.resource(path: 'pics/rooms/{backgroundImage}')}" width="100" />
+		</div>
+	</div>
+	
+	
+	<f:link.action action="index">Back</f:link.action>
+</f:section>)&lt;f:layout name=&quot;Default&quot; /&gt;⏎⏎&lt;f:section name=&quot;Titl…n action=&quot;index&quot;&gt;Back&lt;/f:link.action&gt;⏎&lt;/f:section&gt;)
+18 TYPO3\Fluid\View\AbstractTemplateView::render()
+17 TYPO3\FLOW3\MVC\Controller\ActionController_Original::callActionMethod()
+16 TYPO3\FLOW3\MVC\Controller\ActionController_Original::processRequest(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+15 TYPO3\FLOW3\MVC\Dispatcher_Original::dispatch(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+14 TYPO3\FLOW3\MVC\Dispatcher::dispatch(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+13 call_user_func_array(array, array)
+12 TYPO3\FLOW3\MVC\Dispatcher::FLOW3_AOP_Proxy_invokeJoinPoint(TYPO3\FLOW3\AOP\JoinPoint)
+11 TYPO3\FLOW3\AOP\Advice\AdviceChain_Original::proceed(TYPO3\FLOW3\AOP\JoinPoint)
+10 TYPO3\FLOW3\Security\Aspect\RequestDispatchingAspect_Original::setAccessDeniedResponseHeader(TYPO3\FLOW3\AOP\JoinPoint)
+9 TYPO3\FLOW3\AOP\Advice\AroundAdvice_Original::invoke(TYPO3\FLOW3\AOP\JoinPoint)
+8 TYPO3\FLOW3\AOP\Advice\AdviceChain_Original::proceed(TYPO3\FLOW3\AOP\JoinPoint)
+7 TYPO3\FLOW3\Security\Aspect\RequestDispatchingAspect_Original::blockIllegalRequestsAndForwardToAuthenticationEntryPoints(TYPO3\FLOW3\AOP\JoinPoint)
+6 TYPO3\FLOW3\AOP\Advice\AroundAdvice_Original::invoke(TYPO3\FLOW3\AOP\JoinPoint)
+5 TYPO3\FLOW3\AOP\Advice\AdviceChain_Original::proceed(TYPO3\FLOW3\AOP\JoinPoint)
+4 TYPO3\FLOW3\MVC\Dispatcher::dispatch(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+3 TYPO3\FLOW3\MVC\Web\RequestHandler_Original::handleRequest()
+2 TYPO3\FLOW3\Core\Bootstrap::handleWebRequest()
+1 TYPO3\FLOW3\Core\Bootstrap::run()

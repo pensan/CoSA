@@ -1,0 +1,9 @@
+Uncaught exception #1218473352 in line 380 of /Users/Pensan/Webpages/Apache/CoSA/Data/Temporary/Development/Cache/Code/FLOW3_Object_Classes/TYPO3_FLOW3_MVC_Web_Request_Original.php: The action name must start with a lower case letter, "Room" does not match this criteria.
+
+7 TYPO3\FLOW3\MVC\Web\Request_Original::setControllerActionName((Room)Room)
+6 TYPO3\FLOW3\MVC\Web\Request_Original::setArgument((@action)@action, (Room)Room)
+5 TYPO3\FLOW3\MVC\Web\Routing\Router_Original::route(TYPO3\FLOW3\MVC\Web\Request)
+4 TYPO3\FLOW3\MVC\Web\RequestBuilder_Original::build()
+3 TYPO3\FLOW3\MVC\Web\RequestHandler_Original::handleRequest()
+2 TYPO3\FLOW3\Core\Bootstrap::handleWebRequest()
+1 TYPO3\FLOW3\Core\Bootstrap::run()
