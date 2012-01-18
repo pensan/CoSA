@@ -5,8 +5,6 @@
 		<meta charset="utf-8">
 		<title><f:render section="Title" /></title>
 		<link rel="stylesheet" href="{f:uri.resource(path: 'css/style.css')}" type="text/css" media="all" />
-		<script type="text/javascript" src="{f:uri.resource(path: 'js/jquery-1.2.2.pack.js')}"></script>
-		<script type="text/javascript" src="{f:uri.resource(path: 'js/scripts.js')}"></script>
 		
 		<f:base />
 	</head>
@@ -74,9 +72,26 @@
 		
 			<ul id="hauptnavigation">
 				<div id="ContentBlock">
-					<f:link.action action="new" controller="Player">
-					>> Start your first adventure! 
-				</f:link.action>
+					
+					<div id="roomWrapper" style="background-image: url({f:uri.resource(path: 'pics/rooms/eingang_final.jpg')});">
+						<div id="cora">
+							<img src="{f:uri.resource(path: 'pics/rooms/cora.png')}"  />
+						</div>
+						<div id="bubble" style="background: url({f:uri.resource(path: 'pics/rooms/sprechblase_final.png')});">
+							<div id="question" style="padding-top: 0px;">
+								<div>
+									Willkommen an der FH-Salzburg.<br/>
+									<br/>
+									Meine Name ist Cora, ich werde dich auf deinem Abenteuer durch die Fachhochschule begleiten.<br/>
+									<br/>
+									<f:link.action action="new" controller="Player">
+										>> Beginn dein Abenteuer
+									</f:link.action>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 				</div>
 			</ul>
 		</div>

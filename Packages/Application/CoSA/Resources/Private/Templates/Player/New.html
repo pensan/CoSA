@@ -1,20 +1,29 @@
 <f:layout name="Default" />
 
-<f:section name="Title">New player</f:section>
+<f:section name="Title"></f:section>
 
 <f:section name="Content">
-	<p>Just fill out the following form to create a new player:</p>
 
-	<f:form action="create" name="newPlayer">
-		<ol>
-			<li>
-				<label for="name">Name</label>
-				<f:form.textfield property="name" id="name" />
-			</li>
-		
-			<li>
-				<f:form.submit value="Create" />
-			</li>
-		</ol>
-	</f:form>
+	<div id="roomWrapper" style="background-image: url({f:uri.resource(path: 'pics/rooms/Gang1_final.jpg')});">
+		<div id="cora">
+			<img src="{f:uri.resource(path: 'pics/rooms/cora.png')}"  />
+		</div>
+		<div id="bubble" style="background: url({f:uri.resource(path: 'pics/rooms/sprechblase_final.png')});">
+			<div id="question">
+				<div>
+					Nennst du mir deinen Namen?<br/>
+					<br/>
+					<f:form action="create" name="newPlayer">
+						
+						<f:form.textfield property="name" id="name" /><br/>
+						<br/>
+						<f:form.submit value="Speichern" />
+						<script>document.getElementById("name").focus();</script>
+					</f:form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
 </f:section>

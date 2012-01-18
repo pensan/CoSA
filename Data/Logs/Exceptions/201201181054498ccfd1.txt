@@ -1,0 +1,52 @@
+Uncaught exception #1237823699 in line 445 of /Users/Pensan/Webpages/Apache/CoSA/Data/Temporary/Development/Cache/Code/FLOW3_Object_Classes/TYPO3_Fluid_Core_Parser_TemplateParser_Original.php: Required argument "name" was not supplied.
+
+23 TYPO3\Fluid\Core\Parser\TemplateParser_Original::abortIfRequiredArgumentsAreMissing(array, array)
+22 TYPO3\Fluid\Core\Parser\TemplateParser_Original::initializeViewHelperAndAddItToStack(TYPO3\Fluid\Core\Parser\ParsingState, (f)f, (section)section, array)
+21 TYPO3\Fluid\Core\Parser\TemplateParser_Original::openingViewHelperTagHandler(TYPO3\Fluid\Core\Parser\ParsingState, (f)f, (section)section, (), boolean)
+20 TYPO3\Fluid\Core\Parser\TemplateParser_Original::buildObjectTree(array)
+19 TYPO3\Fluid\Core\Parser\TemplateParser_Original::parse((<f:layout name="Default" />
+
+<f:section></f:section>
+
+<f:section name="Content">
+
+	<div id="roomWrapper" style="background-image: url({f:uri.resource(path: 'pics/rooms/Gang1_final.jpg')});">
+		<div id="cora">
+			<img src="{f:uri.resource(path: 'pics/rooms/cora.png')}"  />
+		</div>
+		<div id="bubble" style="background: url({f:uri.resource(path: 'pics/rooms/sprechblase_final.png')});">
+			<div id="question">
+				<div>
+					Nennst du mir deinen namen?:<br/>
+					<br/>
+					<f:form action="create" name="newPlayer">
+						<label for="name">Name</label>
+						<f:form.textfield property="name" id="name" /><br/>
+						<br/>
+						<f:form.submit value="Speichern" />
+					</f:form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</f:section>)&lt;f:layout name=&quot;Default&quot; /&gt;⏎⏎&lt;f:section&gt;&lt;/f:sectio…		&lt;/div&gt;⏎			&lt;/div&gt;⏎		&lt;/div&gt;⏎	&lt;/div&gt;⏎⏎⏎&lt;/f:section&gt;)
+18 TYPO3\Fluid\View\AbstractTemplateView::render()
+17 TYPO3\FLOW3\MVC\Controller\ActionController_Original::callActionMethod()
+16 TYPO3\FLOW3\MVC\Controller\ActionController_Original::processRequest(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+15 TYPO3\FLOW3\MVC\Dispatcher_Original::dispatch(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+14 TYPO3\FLOW3\MVC\Dispatcher::dispatch(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+13 call_user_func_array(array, array)
+12 TYPO3\FLOW3\MVC\Dispatcher::FLOW3_AOP_Proxy_invokeJoinPoint(TYPO3\FLOW3\AOP\JoinPoint)
+11 TYPO3\FLOW3\AOP\Advice\AdviceChain_Original::proceed(TYPO3\FLOW3\AOP\JoinPoint)
+10 TYPO3\FLOW3\Security\Aspect\RequestDispatchingAspect_Original::setAccessDeniedResponseHeader(TYPO3\FLOW3\AOP\JoinPoint)
+9 TYPO3\FLOW3\AOP\Advice\AroundAdvice_Original::invoke(TYPO3\FLOW3\AOP\JoinPoint)
+8 TYPO3\FLOW3\AOP\Advice\AdviceChain_Original::proceed(TYPO3\FLOW3\AOP\JoinPoint)
+7 TYPO3\FLOW3\Security\Aspect\RequestDispatchingAspect_Original::blockIllegalRequestsAndForwardToAuthenticationEntryPoints(TYPO3\FLOW3\AOP\JoinPoint)
+6 TYPO3\FLOW3\AOP\Advice\AroundAdvice_Original::invoke(TYPO3\FLOW3\AOP\JoinPoint)
+5 TYPO3\FLOW3\AOP\Advice\AdviceChain_Original::proceed(TYPO3\FLOW3\AOP\JoinPoint)
+4 TYPO3\FLOW3\MVC\Dispatcher::dispatch(TYPO3\FLOW3\MVC\Web\Request, TYPO3\FLOW3\MVC\Web\Response)
+3 TYPO3\FLOW3\MVC\Web\RequestHandler_Original::handleRequest()
+2 TYPO3\FLOW3\Core\Bootstrap::handleWebRequest()
+1 TYPO3\FLOW3\Core\Bootstrap::run()

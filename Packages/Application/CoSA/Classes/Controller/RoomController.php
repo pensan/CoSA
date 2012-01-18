@@ -75,6 +75,7 @@ class RoomController extends ActionController {
 		
 		// update points
 		
+		
 		// get next room
 		switch($room->getName()){
 			case "Eingang":
@@ -92,9 +93,17 @@ class RoomController extends ActionController {
 	 * @return void
 	 */
 	public function showAction(Room $room) {
-		$bgImage = "eingang_final.jpg";
 		$cora = "cora.png";
 		$bubble = "sprechblase_final.png";
+		
+		switch($room->getName()){
+			case "Eingang":
+				$bgImage = "Gang2_final.jpg";
+				break;
+			case "MMT":
+				$bgImage = "Raum1_final.jpg";
+				break;
+		}
 		
 		$this->view->assign('room', $room);
 		$this->view->assign('backgroundImage', $bgImage);

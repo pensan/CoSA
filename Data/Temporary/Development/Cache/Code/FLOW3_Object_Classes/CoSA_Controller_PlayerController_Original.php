@@ -65,7 +65,7 @@ class PlayerController_Original extends ActionController {
 	 */
 	public function createAction(Player $newPlayer) {
 		$this->adventureSession->setName($newPlayer->getName());
-		$this->adventureSession->printSession();
+		//$this->adventureSession->printSession();
 		$this->redirect('index', 'Room');
 	}
 
@@ -106,4 +106,4 @@ class PlayerController_Original extends ActionController {
 }
 
 
-#0             %CLASS%CoSA_Controller_PlayerController2556      
+#0             %CLASS%CoSA_Controller_PlayerController2558      

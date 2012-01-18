@@ -65,7 +65,7 @@ class PlayerController extends ActionController {
 	 */
 	public function createAction(Player $newPlayer) {
 		$this->adventureSession->setName($newPlayer->getName());
-		$this->adventureSession->printSession();
+		//$this->adventureSession->printSession();
 		$this->redirect('index', 'Room');
 	}
 

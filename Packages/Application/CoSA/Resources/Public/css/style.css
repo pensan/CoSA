@@ -1870,3 +1870,36 @@ table.typo3-editPanel td {
 	padding: 3px;
 }
 /* @end */
+
+
+/* OWN CODE */
+#roomWrapper {
+	height: 500px; 
+	width: 850px; 
+	position: relative;
+}
+#roomWrapper #cora {
+	position:absolute; 
+	bottom: -5px; 
+	left: -70px;"
+}
+#roomWrapper #bubble {
+	position:absolute; 
+	bottom: 240px; 
+	left: 165px; 
+	height: 250px; 
+	width: 345px;
+}
+#roomWrapper #question {
+	margin: 60px auto; 
+	width: 215px; 
+	height: 150px;"
+}
+#roomWrapper .answer {
+	margin-top: 5px;
+}
+#roomWrapper input[type='text'] {
+	font-size: 25px;
+	height: 30px;
+	width: 200px;
+}
