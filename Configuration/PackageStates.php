@@ -36,5 +36,9 @@ return array (
   array (
     'state' => 'active',
   ),
+  'TYPO3.CoSA' => 
+  array (
+    'state' => 'active',
+  ),
 )
  ?>

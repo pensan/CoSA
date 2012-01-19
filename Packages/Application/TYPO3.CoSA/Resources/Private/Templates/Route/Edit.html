@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit route "{route.name}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{route}" name="route">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+			<li>
+				<label for="roomSource">Room source</label>
+				<f:form.select property="roomSource" name="RoomSource" options="{rooms}" optionLabelField="name" />
+			</li>
+			<li>
+				<label for="answer">Answer</label>
+				<f:form.select property="answer" name="Answer" options="{answers}" optionLabelField="text" />
+			</li>
+			<li>
+				<label for="roomDestination">Room destination</label>
+				<f:form.select property="roomDestination" name="RoomDestination" options="{rooms}" optionLabelField="name" />
+			</li>
+			<li>
+				<f:form.submit value="Update"/>
+			</li>
+		</ol>
+	</f:form>
+</f:section>

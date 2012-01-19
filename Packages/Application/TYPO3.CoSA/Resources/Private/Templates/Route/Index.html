@@ -1,0 +1,23 @@
+<f:layout name="Default" />
+
+<f:section name="Title">A list of routes</f:section>
+
+<f:section name="Content">
+	<f:if condition="{routes}">
+		<f:then>
+			<ul>
+				<f:for each="{routes}" as="route">
+					<li>
+						<f:link.action action="show" arguments="{route: route}">{route.name}</f:link.action>
+						<f:link.action action="edit" arguments="{route: route}">Edit</f:link.action>
+						<f:link.action action="delete" arguments="{route: route}">Delete</f:link.action>
+					</li>
+				</f:for>
+			</ul>
+		</f:then>
+		<f:else>
+			<p>No routes created yet.</p>
+		</f:else>
+	</f:if>
+	<p><f:link.action action="new">Create a new route</f:link.action></p>
+</f:section>

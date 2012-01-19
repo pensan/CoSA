@@ -1,0 +1,5 @@
+Uncaught exception #1297263663 in line 363 of /Applications/MAMP/htdocs/flow3/Packages/Framework/TYPO3.FLOW3/Classes/Core/Bootstrap.php: The compile run failed. Please check the error output or system log for more information.
+
+3 TYPO3\FLOW3\Core\Bootstrap::initializeForRuntime()
+2 TYPO3\FLOW3\Core\Bootstrap::handleWebRequest()
+1 TYPO3\FLOW3\Core\Bootstrap::run()

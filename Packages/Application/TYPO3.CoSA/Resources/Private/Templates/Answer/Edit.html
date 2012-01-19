@@ -1,0 +1,21 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit answer "{answer.text}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{answer}" name="answer">
+		<ol>
+			<li>
+				<label for="text">Text</label>
+				<f:form.textfield property="text" id="text" />
+			</li>
+			<li>
+				<label for="question">Question</label>
+				<f:form.select property="question" name="Question" options="{questions}" value="{question.text}" optionLabelField="text" />
+			</li>
+			<li>
+				<f:form.submit value="Update"/>
+			</li>
+		</ol>
+	</f:form>
+</f:section>

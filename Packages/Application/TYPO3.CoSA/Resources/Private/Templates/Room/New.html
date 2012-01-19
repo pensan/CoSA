@@ -1,0 +1,27 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New room</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new room:</p>
+
+	<f:form action="create" name="newRoom">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+			<li>
+				<label for="type">Type</label>
+				<f:form.select property="type" name="Type" options="{s:'standard',f:'final',e:'entrance'}" optionLabelField="type" />
+			</li>
+			<li>
+				<label for="question">Question</label>
+				<f:form.select property="question" name="Question" options="{questions}" optionLabelField="text" />
+			</li>		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>

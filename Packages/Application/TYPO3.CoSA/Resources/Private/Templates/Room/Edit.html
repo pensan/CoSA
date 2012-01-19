@@ -1,0 +1,25 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Edit room "{room.name}"</f:section>
+
+<f:section name="Content">
+	<f:form action="update" object="{room}" name="room">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+			<li>
+				<label for="type">Type</label>
+				<f:form.select property="type" name="Type" options="{s:'standard',f:'final',e:'entrance'}" value="{room.type}" optionLabelField="type" />
+			</li>
+			<li>
+				<label for="question">Question</label>
+				<f:form.select property="question" name="Question" options="{questions}" value="{room.question}" optionLabelField="text" />
+			</li>		
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>
