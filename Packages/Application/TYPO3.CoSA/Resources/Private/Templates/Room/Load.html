@@ -1,0 +1,21 @@
+<f:layout name="Default" />
+
+<f:section name="Title">Show room "{room.name}"</f:section>
+
+<f:section name="Content">
+	<table>
+		<tr>
+			<th>Name</th>
+			<td>{room.name}</td>
+		</tr>
+		<tr>
+			<th>Type</th>
+			<td>{room.type}</td>
+		</tr>
+		<tr>
+			<th>Question</th>
+			<td>{room.question.text}</td>
+		</tr>
+	</table>
+	<f:link.action action="index">Back</f:link.action>
+</f:section>

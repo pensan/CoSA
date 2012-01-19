@@ -131,6 +131,7 @@ class RoomController extends RoomController_Original implements \TYPO3\FLOW3\Obj
 		$this->injectSettings(\TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\FLOW3\Configuration\ConfigurationManager')->getConfiguration(\TYPO3\FLOW3\Configuration\ConfigurationManager::CONFIGURATION_TYPE_SETTINGS, 'TYPO3.CoSA'));
 		$this->roomRepository = \TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\CoSA\Domain\Repository\RoomRepository');
 		$this->questionRepository = \TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\CoSA\Domain\Repository\QuestionRepository');
+		$this->routeRepository = \TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\CoSA\Domain\Repository\RouteRepository');
 		$this->objectManager = \TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\FLOW3\Object\ObjectManagerInterface');
 		$this->reflectionService = \TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\FLOW3\Reflection\ReflectionService');
 		$this->environment = \TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\FLOW3\Utility\Environment');
@@ -139,4 +140,4 @@ class RoomController extends RoomController_Original implements \TYPO3\FLOW3\Obj
 		$this->persistenceManager = \TYPO3\FLOW3\Core\Bootstrap::$staticObjectManager->get('TYPO3\FLOW3\Persistence\PersistenceManagerInterface');
 	}
 }
-#0             %CLASS%TYPO3_CoSA_Controller_RoomController %CLASS%TYPO3_FLOW3_MVC_Controller_ActionController %CLASS%TYPO3_FLOW3_MVC_Controller_AbstractController8264      
+#0             %CLASS%TYPO3_CoSA_Controller_RoomController %CLASS%TYPO3_FLOW3_MVC_Controller_ActionController %CLASS%TYPO3_FLOW3_MVC_Controller_AbstractController8395      

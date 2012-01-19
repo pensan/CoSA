@@ -29,6 +29,12 @@ class RoomController extends ActionController {
 	 * @var \TYPO3\CoSA\Domain\Repository\QuestionRepository
 	 */
 	protected $questionRepository;
+	
+	/**
+	 * @FLOW3\Inject
+	 * @var \TYPO3\CoSA\Domain\Repository\RouteRepository
+	 */
+	protected $routeRepository;
 
 	/**
 	 * Shows a list of rooms
@@ -104,7 +110,29 @@ class RoomController extends ActionController {
 		$this->addFlashMessage('Deleted a room.');
 		$this->redirect('index');
 	}
+	
+	/**
+	 * Start new adventure
+	 *
+	 * @return void
+	 */
+	public function startAction() {
+		$room = $this->roomRepository->findOneByName("Eingang");
+		//\TYPO3\FLOW3\var_dump($room);
+		$this->redirect('load', 'Room', NULL, array('room' => $room));
+	}
 
+	/**
+	 * Load Room
+	 *
+	 * @param \TYPO3\CoSA\Domain\Model\Room $room The room to load
+	 * @return void
+	 */
+	public function loadAction(Room $room) {
+		$answers = $room->getQuestion();
+	//	$routes = $this->routeRepository->findByRoomsourceAndAnswer($room->getId(), $anwers->getId());
+	//	\TYPO3\FLOW3\var_dump($routes);
+	}
 }
 
 ?>
