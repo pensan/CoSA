@@ -187,3 +187,7 @@
 12-01-19 13:04:22 502        DEBUG     FLOW3                Router route(): Route "FLOW3 :: default with action and format" matched the path "typo3.cosa/route/create". [logged in TYPO3\FLOW3\MVC\Web\Routing\Router_Original::findMatchResults()]
 12-01-19 13:04:24 502        DEBUG     FLOW3                Resumed session with id d0cf63e5a01b73a064b707c4a10e1f17 [logged in TYPO3\FLOW3\Session\Aspect\LoggingAspect_Original::logResume()]
 12-01-19 13:04:24 502        DEBUG     FLOW3                Router route(): Route "FLOW3 :: default with action and format" matched the path "typo3.cosa/route/index". [logged in TYPO3\FLOW3\MVC\Web\Routing\Router_Original::findMatchResults()]
+12-01-19 13:26:56 498        DEBUG     FLOW3                Resumed session with id d0cf63e5a01b73a064b707c4a10e1f17 [logged in TYPO3\FLOW3\Session\Aspect\LoggingAspect_Original::logResume()]
+12-01-19 13:26:56 498        DEBUG     FLOW3                Router route(): Route "FLOW3 :: default with package" matched the path "typo3.cosa". [logged in TYPO3\FLOW3\MVC\Web\Routing\Router_Original::findMatchResults()]
+12-01-19 13:28:33 8594       DEBUG     FLOW3                Resumed session with id d0cf63e5a01b73a064b707c4a10e1f17 [logged in TYPO3\FLOW3\Session\Aspect\LoggingAspect_Original::logResume()]
+12-01-19 13:28:33 8594       DEBUG     FLOW3                Router route(): Route "FLOW3 :: default with package" matched the path "typo3.cosa". [logged in TYPO3\FLOW3\MVC\Web\Routing\Router_Original::findMatchResults()]

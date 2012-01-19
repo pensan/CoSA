@@ -1,0 +1,82 @@
+/* 
+fh salzburg 
+spezieller einstellungen fuer internet explorer, version 7
+meg@wachenfeld-golla.de, 2008-02-29
+*/
+
+div#trailers a span {
+	bottom: 8px;
+	right: 8px;
+}
+
+div#trailers a:link span, div#trailers a:visited span {
+	filter:alpha(opacity=20);
+}
+
+div#trailers a:hover span, div#trailers a:active span, div#trailers a:focus span {
+	filter:alpha(opacity=30);
+}
+
+ul#hauptnavigation {
+	border-top: none;
+	border-bottom: 1px solid #ccc;
+}
+
+/* 
+bleibt bei ie der border unten, wird am unteren ende des <li> vieles falsch dargestellt 
+andererseits hat safari schwierigkeiten, wenn man border-top verwendet...
+*/
+ul#hauptnavigation li {
+	border-top: 1px solid #ccc;
+	border-bottom: none;
+}
+
+ul#hauptnavigation ul.spalte2, ul#hauptnavigation ul.spalte3, ul#hauptnavigation ul.spalte4 {
+	top: -36px;
+	margin-bottom: -35px;
+}
+
+ul#hauptnavigation ul.spalte5 {
+	top: -44px;
+	margin-bottom: -43px;
+}
+
+/*TYPO3-spezifisch, eingef&#159;gt von Stefan am 12.Dez 2007*/
+#trailers .csc-textpic-imagewrap{
+	width:66.5em
+}
+
+h1.csc-firstHeader {
+	margin: 0;
+	padding: 0;
+}
+
+
+ul#hauptnavigation a.zweiZeilig {
+	padding-top: 9px !important;
+	background-position: 100% 13px !important;
+}
+
+ul#hauptnavigation a.mitSubmenuOffen {
+	padding-left: 0 !important;
+}
+
+body#sitemap ul#hauptnavigation ul.spalte4 {
+	top: -36px;
+	margin-bottom: 0px;
+}
+
+body#sitemap ul#hauptnavigation ul.spalte5 {
+	margin-top: 0px;
+	top: -36px;
+	margin-bottom: -29px;
+}
+
+div#ContentBlock table.formular input {
+	padding:0px !important;
+}
+
+li.rss {
+	position: inherit;
+	top: 0;
+}
