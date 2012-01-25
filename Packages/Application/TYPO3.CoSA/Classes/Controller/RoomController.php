@@ -128,6 +128,31 @@ class RoomController extends ActionController {
 		//\TYPO3\FLOW3\var_dump($room);
 		$this->redirect('load', 'Room', NULL, array('room' => $room));
 	}
+	
+	/**
+	 * Set video for final room
+	 *
+	 * @param \TYPO3\CoSA\Domain\Model\Room $room The room to load
+	 * @return string
+	 */
+	private function getVideo(Room $room) {
+		$videoUrl = "";
+		switch($room->getName()){
+			case "MMT C++":
+				$videoUrl = "http://www.youtube.com/v/nziy2_U5JQI";
+				break;
+			case "MMT HTML5":
+				$videoUrl = "http://www.youtube.com/v/siOHh0uzcuY";
+				break;
+			case "MMA Audio":
+				$videoUrl = "http://www.youtube.com/v/wiAq1L7mR0Q";
+				break;
+			case "MMA Video":
+				$videoUrl = "http://www.youtube.com/v/MvJeQaTRT5E";
+				break;
+		}
+		return $videoUrl;
+	}
 
 	/**
 	 * Load Room
@@ -144,7 +169,10 @@ class RoomController extends ActionController {
 				$bgImage = "eingang_final.jpg";
 				break;
 			case "f":
-				$bgImage = "Raum_final.jpg";
+				$bgImage = "Raum1_final.jpg";
+				$videoUrl = $this->getVideo($room);
+				print($videoUrl);
+				$this->view->assign('videoUrl', $videoUrl);
 				break;
 			default:
 			 	$bgImage = "Gang1_final.jpg";
@@ -156,16 +184,12 @@ class RoomController extends ActionController {
 	/**
 	 * Load Room
 	 *
-	 * @param \TYPO3\CoSA\Domain\Model\Room $sourceRoom The current room
-	 * @param \TYPO3\CoSA\Domain\Model\Answer $answer The selected answer
+	 * @param array $answer The selected answer answer
 	 * @return void
 	*/
-	public function nextAction(Room $sourceRoom, Answer $answer) {
-		\TYPO3\FLOW3\var_dump($answer);
-		\TYPO3\FLOW3\var_dump($sourceRoom);
-		
-		//$routes = $this->routeRepository->findOneByRoomAndAnswer($sourceRoom, $answer);
-		//$this->redirect('load', 'Room', NUll, array('room' => $route->getRoomDestination()));
+	public function nextAction($answer) {
+		$route = $this->routeRepository->findOneByAnswer($answer['__identity']);
+		$this->redirect('load', 'Room', NUll, array('room' => $route->getRoomDestination()));
 	}
 }
 

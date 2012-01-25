@@ -19,25 +19,6 @@ class RouteRepository_Original extends \TYPO3\FLOW3\Persistence\Repository {
 
 	// add customized methods here
 
-	
-	/**
-	 * Find all matching routes
-	 *
-	 * @param \TYPO3\CoSA\Domain\Model\Room $room Current room
-	 * @param \TYPO3\CoSA\Domain\Model\Answer $answer Current answer
-	 * @return \TYPO3\FLOW3\Persistence\QueryResultProxy The new room
-	 */
-	public function findOneByRoomAndAnswer(\TYPO3\CoSA\Domain\Model\Room $room, \TYPO3\CoSA\Domain\Model\Answer $answer) {
-		\TYPO3\FLOW3\var_dump($answer);
-		
-	        $query = $this->createQuery();
-	        return $query->matching(
-					$query->equals('roomsource', $room),
-					$query->equals('answer', $answer)
-					)
-	                ->execute()
-	                ->getFirst();
-	}
 }
 
-#0             %CLASS%TYPO3_CoSA_Domain_Repository_RouteRepository1284      
+#0             %CLASS%TYPO3_CoSA_Domain_Repository_RouteRepository664       

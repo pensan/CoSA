@@ -1903,3 +1903,8 @@ table.typo3-editPanel td {
 	height: 30px;
 	width: 200px;
 }
+
+#video {
+	width: 560px;
+	margin: 10px auto;
+}
