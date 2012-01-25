@@ -1905,6 +1905,6 @@ table.typo3-editPanel td {
 }
 
 #video {
-	width: 560px;
-	margin: 10px auto;
+	padding-top: 106px;
+	padding-left: 234px;
 }
