@@ -1,21 +1,31 @@
 <f:layout name="Default" />
 
-<f:section name="Title">Show room "{room.name}"</f:section>
+<f:section name="Title"></f:section>
+
 
 <f:section name="Content">
-	<table>
-		<tr>
-			<th>Name</th>
-			<td>{room.name}</td>
-		</tr>
-		<tr>
-			<th>Type</th>
-			<td>{room.type}</td>
-		</tr>
-		<tr>
-			<th>Question</th>
-			<td>{room.question.text}</td>
-		</tr>
-	</table>
-	<f:link.action action="index">Back</f:link.action>
+   <div id="roomWrapper" style="background-image: url({f:uri.resource(path: 'pics/rooms/{backgroundImage}')});">
+
+<f:if condition="{room.type} != 'f'">
+<f:then>
+       <div id="cora">
+           <img src="{f:uri.resource(path: 'pics/rooms/cora.png')}"  />
+       </div>
+
+       <div id="bubble" style="background: url({f:uri.resource(path: 'pics/rooms/sprechblase_final.png')});">
+           <div id="question">
+               <div>
+                   {room.question.text}
+               </div>
+               <f:for each="{answers}" as="answer">
+	              <div class="answer">
+	                  <f:link.action action="next" arguments="{answer:answer,sourceRoom:room}">{answer.text}</f:link.action>
+	              </div>
+				</f:for>
+           </div>
+       </div>
+</f:then>
+</f:if>
+
+   </div>
 </f:section>

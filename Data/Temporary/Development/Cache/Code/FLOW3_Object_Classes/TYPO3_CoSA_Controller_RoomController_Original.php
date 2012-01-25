@@ -10,6 +10,7 @@ use TYPO3\FLOW3\Annotations as FLOW3;
 
 use TYPO3\FLOW3\MVC\Controller\ActionController;
 use \TYPO3\CoSA\Domain\Model\Room;
+use \TYPO3\CoSA\Domain\Model\Answer as Answer;
 
 /**
  * Room controller for the TYPO3.CoSA package 
@@ -35,6 +36,12 @@ class RoomController_Original extends ActionController {
 	 * @var \TYPO3\CoSA\Domain\Repository\RouteRepository
 	 */
 	protected $routeRepository;
+	
+	/**
+	 * @FLOW3\Inject
+	 * @var \TYPO3\CoSA\Domain\Repository\AnswerRepository
+	 */
+	protected $answerRepository;
 
 	/**
 	 * Shows a list of rooms
@@ -129,11 +136,38 @@ class RoomController_Original extends ActionController {
 	 * @return void
 	 */
 	public function loadAction(Room $room) {
-		$answers = $room->getQuestion();
-	//	$routes = $this->routeRepository->findByRoomsourceAndAnswer($room->getId(), $anwers->getId());
-	//	\TYPO3\FLOW3\var_dump($routes);
+		$this->view->assign('answers', $this->answerRepository->findByQuestion($room->getQuestion()));
+		$this->view->assign('room', $room);
+
+		switch($room->getType()){
+			case "e":
+				$bgImage = "eingang_final.jpg";
+				break;
+			case "f":
+				$bgImage = "Raum_final.jpg";
+				break;
+			default:
+			 	$bgImage = "Gang1_final.jpg";
+				break;
+		}
+		$this->view->assign('backgroundImage', $bgImage);
+	}
+	
+	/**
+	 * Load Room
+	 *
+	 * @param \TYPO3\CoSA\Domain\Model\Room $sourceRoom The current room
+	 * @param \TYPO3\CoSA\Domain\Model\Answer $answer The selected answer
+	 * @return void
+	*/
+	public function nextAction(Room $sourceRoom, Answer $answer) {
+		\TYPO3\FLOW3\var_dump($answer);
+		\TYPO3\FLOW3\var_dump($sourceRoom);
+		
+		//$routes = $this->routeRepository->findOneByRoomAndAnswer($sourceRoom, $answer);
+		//$this->redirect('load', 'Room', NUll, array('room' => $route->getRoomDestination()));
 	}
 }
 
 
-#0             %CLASS%TYPO3_CoSA_Controller_RoomController3342      
+#0             %CLASS%TYPO3_CoSA_Controller_RoomController4233      
