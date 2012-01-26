@@ -171,7 +171,6 @@ class RoomController extends ActionController {
 			case "f":
 				$bgImage = "Raum1_final.jpg";
 				$videoUrl = $this->getVideo($room);
-				print($videoUrl);
 				$this->view->assign('videoUrl', $videoUrl);
 				break;
 			default:

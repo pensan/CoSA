@@ -171,7 +171,6 @@ class RoomController_Original extends ActionController {
 			case "f":
 				$bgImage = "Raum1_final.jpg";
 				$videoUrl = $this->getVideo($room);
-				print($videoUrl);
 				$this->view->assign('videoUrl', $videoUrl);
 				break;
 			default:
@@ -194,4 +193,4 @@ class RoomController_Original extends ActionController {
 }
 
 
-#0             %CLASS%TYPO3_CoSA_Controller_RoomController4736      
+#0             %CLASS%TYPO3_CoSA_Controller_RoomController4714      

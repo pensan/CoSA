@@ -21,9 +21,6 @@ class StandardController extends \TYPO3\FLOW3\MVC\Controller\ActionController {
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('foos', array(
-			'bar', 'baz'
-		));
 	}
 
 }

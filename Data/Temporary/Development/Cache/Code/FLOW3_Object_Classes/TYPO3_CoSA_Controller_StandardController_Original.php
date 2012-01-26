@@ -21,12 +21,9 @@ class StandardController_Original extends \TYPO3\FLOW3\MVC\Controller\ActionCont
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('foos', array(
-			'bar', 'baz'
-		));
 	}
 
 }
 
 
-#0             %CLASS%TYPO3_CoSA_Controller_StandardController715       
+#0             %CLASS%TYPO3_CoSA_Controller_StandardController656       

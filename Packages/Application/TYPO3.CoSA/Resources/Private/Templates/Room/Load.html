@@ -27,6 +27,9 @@
        </div>
 </f:then>
 <f:else>
+<div style="background: #fff;">
+	<f:link.action action="start">Neustart</f:link.action>
+</div>
 	<div id="video">
 
 	<object width="430" height="240">
@@ -36,7 +39,6 @@
 		<embed src="{videoUrl}?version=3&amp;hl=en_US&amp;rel=0" type="application/x-shockwave-flash" width="430" height="240" allowscriptaccess="always" allowfullscreen="true">
 		</embed>
 	</object>
-
    </div>
 </f:else>
 </f:if>
